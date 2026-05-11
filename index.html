@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>pizza</title>
+
+<style>
+body{
+    background:#ffdbe8;
+    text-align:center;
+    font-family:Arial;
+    margin:0;
+    padding:30px;
+    overflow:hidden;
+}
+
+h1{
+    color:#d63384;
+    margin-bottom:20px;
+}
+
+img{
+    border-radius:20px;
+}
+
+#mainPic{
+    width:220px;
+    margin-bottom:25px;
+}
+
+button{
+    border:none;
+    padding:15px 30px;
+    font-size:22px;
+    border-radius:10px;
+    cursor:pointer;
+    position:relative;
+}
+
+#yesBtn{
+    background:green;
+    color:white;
+    margin-right:20px;
+}
+
+#noBtn{
+    background:red;
+    color:white;
+}
+
+#page2{
+    display:none;
+}
+
+#finalPic{
+    width:250px;
+    margin-top:20px;
+}
+</style>
+</head>
+<body>
+
+<div id="page1">
+    <h1>ممكن تعمليلي بيتزا ي ميس رحومهه طيوبهه</h1>
+
+    <img id="mainPic" src="main.jpg">
+
+    <br>
+
+    <button id="yesBtn">Yes</button>
+    <button id="noBtn">No</button>
+</div>
+
+<div id="page2">
+    <h1>
+    قد ابه انتي طيوبه يميس رحوكهه طيوبه اعمليلي يلا<br>
+    </h1>
+
+    <img id="finalPic" src="final.jpg">
+</div>
+
+<script>
+let noBtn = document.getElementById("noBtn");
+
+noBtn.addEventListener("mouseover", function(){
+    let x = Math.random() * 300 - 150;
+    let y = Math.random() * 300 - 150;
+    noBtn.style.transform =
+    `translate(${x}px, ${y}px)`;
+});
+
+document.getElementById("yesBtn").onclick=function(){
+    document.getElementById("page1").style.display="none";
+    document.getElementById("page2").style.display="block";
+}
+</script>
+
+</body>
+</html>
